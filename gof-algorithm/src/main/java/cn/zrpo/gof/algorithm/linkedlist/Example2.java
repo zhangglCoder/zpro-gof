@@ -18,11 +18,12 @@ public class Example2 {
         Example2 example1 = new Example2();
 
         Node linkedList = example1.createLinkedList(Arrays.asList(1, 2, 3, 4, 54, 3));
-        print(linkedList);
-        linkedList = example1.createLinkedList(Arrays.asList(1));
+        Node reverse = example1.reverse(linkedList);
+        print(reverse);
+        /*linkedList = example1.createLinkedList(Arrays.asList(1));
         print(linkedList);
         linkedList = example1.createLinkedList(Collections.EMPTY_LIST);
-        print(linkedList);
+        print(linkedList);*/
 
     }
 
@@ -57,8 +58,12 @@ public class Example2 {
      * @return
      */
     public Node reverse(Node node){
+        if(node == null || node.getNext() == null){
+            return node;
+        }
         Node newReverseLinkedList = reverse(node.getNext());
-        node.getNext().setNext(newReverseLinkedList);
+        node.getNext().setNext(node);
+        node.setNext(null);
         return newReverseLinkedList;
     }
 
