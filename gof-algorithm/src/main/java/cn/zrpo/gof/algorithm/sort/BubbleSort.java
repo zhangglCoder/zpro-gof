@@ -1,7 +1,5 @@
 package cn.zrpo.gof.algorithm.sort;
 
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * 冒泡排序
