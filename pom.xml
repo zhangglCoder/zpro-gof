@@ -30,6 +30,7 @@
     <modules>
 
         <module>gof-algorithm</module>
+        <module>gof-patterns</module>
     </modules>
 
     <build>
